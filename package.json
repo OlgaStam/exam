@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.2.6",
     "prettier": "3.0.2"
   }
 }
