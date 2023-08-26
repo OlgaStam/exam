@@ -1,0 +1,13 @@
+.currencies {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.currency {
+    margin-right: 8px;
+}
+
+.currency:hover {
+    cursor: pointer;
+}
