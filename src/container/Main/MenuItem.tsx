@@ -12,7 +12,7 @@ const MenuItem = ({ to, children }: Props) => {
         <Button color="inherit">
             <NavLink
                 to={to}
-                className={({ isActive }) =>
+                className={( isActive) =>
                     isActive ? 'nav-active' : 'nav-item'
                 }
             >
