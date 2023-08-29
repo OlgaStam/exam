@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import ProductListItem from './ProductListItem'
-import productsArray from './productsArray'
+import productsArray from '../../utils/productsArray'
 
 type ProductProps = {
     name: string
@@ -26,8 +26,7 @@ const ProductsList = ({ addProductToCart, typeCurrency }: Props) => {
                 {productsArray.map(
                     ({ 
                         name, description, price }: ProductProps) => (
-                        <Grid item xs={12} sm={6} md={4} 
-                        >
+                        <Grid item xs={12} sm={6} md={4}>
                             <ProductListItem
                                 name={name}
                                 description={description}

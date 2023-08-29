@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import './Main.scss'
+import './Menu.scss'
 import { Button } from '@mui/material'
 
 type Props = {

@@ -1,11 +1,6 @@
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-} from "@mui/material";
+import { Button, Card, CardActions, CardContent } from "@mui/material";
 import "./ProductListItem.scss";
-import { currencyExchange } from "../../helpers/currencyExchange";
+import { currencyExchange } from "../../utils/currencyExchange";
 
 type Props = {
   name: string;
@@ -16,22 +11,22 @@ type Props = {
 };
 
 const ProductListItem = ({
-   name,
+  name,
   description,
   price,
   addProductToCart,
   typeCurrency,
 }: Props) => {
-
+  
   let prefix = "";
 
   typeCurrency === "USD"
     ? (prefix = "$")
     : typeCurrency === "EUR"
-      ? (prefix = "€")
-      : typeCurrency === "UAH"
-        ? (prefix = "₴")
-        : (prefix = "zł");
+    ? (prefix = "€")
+    : typeCurrency === "UAH"
+    ? (prefix = "₴")
+    : (prefix = "zł");
 
   const count = 1;
 
@@ -45,10 +40,10 @@ const ProductListItem = ({
         <div className="product-price">
           Price: {newValue} {prefix}
         </div>
-
       </CardContent>
       <CardActions className="btn-wrap">
-        <Button className=" buy"
+        <Button
+          className=" buy"
           variant="outlined"
           onClick={() => addProductToCart(count, price)}
         >

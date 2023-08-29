@@ -1,4 +1,4 @@
-import CartFooter from "../../components/Cart/CartFooter"
+import TotalFooter from "../../components/Cart/TotalFooter"
 
 type Props = {
     cartData: {
@@ -11,7 +11,7 @@ const Footer = ({ cartData, typeCurrency }: Props) => {
     
     return (
         <div>
-            <CartFooter
+            <TotalFooter 
                 totalPrice={cartData.totalPrice}
                 typeCurrency={typeCurrency}
             />
