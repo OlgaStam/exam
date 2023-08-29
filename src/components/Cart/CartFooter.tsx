@@ -7,7 +7,7 @@ type Props = {
 }
 
 const CartFooter = ({ totalPrice, typeCurrency }: Props) => {
-    const newTotalPrice = currencyExchange(totalPrice, typeCurrency)
+    const newTotalPrice = currencyExchange(totalPrice, typeCurrency).toFixed(2)
     let prefix = "";
 
     typeCurrency === "USD"

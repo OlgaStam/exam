@@ -1,8 +1,8 @@
 const objExchange:{ 'USD': number; 'EUR': number; 'UAH': number; 'PLN': number } = {
   'USD': 1, 
-  'EUR': 1.2, 
-  'UAH': 37, 
-  'PLN': 4.5,
+  'EUR': 0.92494, 
+  'UAH': 36.658, 
+  'PLN': 4.13457,
 }
 
 
