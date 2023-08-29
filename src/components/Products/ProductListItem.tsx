@@ -45,7 +45,7 @@ const ProductListItem = ({
   // const onDecrementClick = () =>
   //     setCount((prevState: number) => prevState - 0)
 
-  const newValue = currencyExchange(price, typeCurrency);
+  const newValue = currencyExchange(price, typeCurrency).toFixed(2);
 
   return (
     <Card className="product">
