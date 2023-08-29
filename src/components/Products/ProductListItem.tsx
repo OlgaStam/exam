@@ -3,14 +3,12 @@ import {
   Card,
   CardActions,
   CardContent,
-  TextField,
 } from "@mui/material";
-import { useState } from "react";
 import "./ProductListItem.scss";
 import { currencyExchange } from "../../helpers/currencyExchange";
 
 type Props = {
-  id: number;
+  // id: number;
   name: string;
   description: String;
   price: number;
@@ -19,7 +17,7 @@ type Props = {
 };
 
 const ProductListItem = ({
-  id,
+  // id,
   name,
   description,
   price,
@@ -32,18 +30,12 @@ const ProductListItem = ({
   typeCurrency === "USD"
     ? (prefix = "$")
     : typeCurrency === "EUR"
-    ? (prefix = "€")
-    : typeCurrency === "UAH"
-    ? (prefix = "₴")
-    : (prefix = "zł");
+      ? (prefix = "€")
+      : typeCurrency === "UAH"
+        ? (prefix = "₴")
+        : (prefix = "zł");
 
-  const [count, setCount] = useState<number>(1);
-
-  // const onIncrementClick = () =>
-  //     setCount((prevState: number) => prevState + 0)
-
-  // const onDecrementClick = () =>
-  //     setCount((prevState: number) => prevState - 0)
+  const count = 1;
 
   const newValue = currencyExchange(price, typeCurrency).toFixed(2);
 
@@ -55,7 +47,7 @@ const ProductListItem = ({
         <div className="product-price">
           Price: {newValue} {prefix}
         </div>
-     
+
       </CardContent>
       <CardActions className="btn-wrap">
         <Button className=" buy"

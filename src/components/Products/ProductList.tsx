@@ -3,7 +3,7 @@ import ProductListItem from './ProductListItem'
 import productsArray from './productsArray'
 
 type ProductProps = {
-    id: number
+    // id: number
     name: string
     description: string
     price: number
@@ -25,10 +25,14 @@ const ProductsList = ({ addProductToCart, typeCurrency }: Props) => {
                 spacing={4}
             >
                 {productsArray.map(
-                    ({ id, name, description, price }: ProductProps) => (
-                        <Grid item xs={12} sm={6} md={4} key={id}>
+                    ({ 
+                        // id, 
+                        name, description, price }: ProductProps) => (
+                        <Grid item xs={12} sm={6} md={4} 
+                        // key={id}
+                        >
                             <ProductListItem
-                                id={id}
+                                // id={id}
                                 name={name}
                                 description={description}
                                 price={price}

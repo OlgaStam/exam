@@ -2,7 +2,7 @@ import CartFooter from "../../components/Cart/CartFooter"
 
 type Props = {
     cartData: {
-        totalCount: number
+        // totalCount: number
         totalPrice: number
     }
     typeCurrency: 'USD' | 'EUR' | 'UAH' | 'PLN'

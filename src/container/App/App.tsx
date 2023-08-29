@@ -11,38 +11,27 @@ import Main from '../Main/Main'
 import Footer from '../Footer/Footer'
 
 type CartData = {
-  totalCount: number
+  // totalCount: number
   totalPrice: number
 }
-// Определение типа CartData, который представляет данные о корзине.
-
 const App = () => {
-  // Определение компонента App, который является основным компонентом вашего приложения.
-
   const [cartData, setCartData] = useState<CartData>({
-    totalCount: 0,
+    // totalCount: 0,
     totalPrice: 0,
   })
-  // Использование useState для создания состояния cartData, которое хранит общее количество товаров и общую стоимость в корзине.
-
 
   const [typeCurrency, setTypeCurrency] = useState<
     'USD' | 'EUR' | 'UAH' | 'PLN'
   >('USD')
-  // Использование useState для создания состояния typeCurrency, которое хранит текущую выбранную валюту.
-
 
   const addProductToCart = (count: number, price: number) => {
     setCartData((prevState: CartData) => ({
-      totalCount: prevState.totalCount + count,
+      // totalCount: prevState.totalCount + count,
       totalPrice: prevState.totalPrice + count * price,
     }))
   }
-  // Определение функции addProductToCart, которая добавляет товары в корзину и обновляет состояние cartData.
-
 
   return (
-    // Возвращение разметки компонента App, которая содержит компоненты Main и Footer из вашего проекта.
     <div><>
       <StyledEngineProvider injectFirst>
         <CssBaseline />
@@ -60,4 +49,3 @@ const App = () => {
 }
 
 export default App
-// Экспорт компонента App.
