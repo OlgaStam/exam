@@ -26,13 +26,17 @@ const ProductListItem = ({
     addProductToCart,
     typeCurrency,
 }: Props) => {
+    const isUSD = typeCurrency === 'USD' 
+  const isEUR = typeCurrency === 'EUR' 
+  const isUAH = typeCurrency === 'UAH' 
+  const isPLN = typeCurrency === 'PLN' 
     const [count, setCount] = useState<number>(1)
 
-    const onIncrementClick = () =>
-        setCount((prevState: number) => prevState + 0)
+    // const onIncrementClick = () =>
+    //     setCount((prevState: number) => prevState + 0)
 
-    const onDecrementClick = () =>
-        setCount((prevState: number) => prevState - 0)
+    // const onDecrementClick = () =>
+    //     setCount((prevState: number) => prevState - 0)
 
     const newValue = currencyExchange(price, typeCurrency)
 
@@ -41,11 +45,12 @@ const ProductListItem = ({
             <CardContent>
                 <h4>{name}</h4>
                 <p className="product-description">{description}</p>
-                <div className="product-price">Price: {newValue}</div>
+                <div className="product-price">Price: {newValue} {typeCurrency}</div>
+                
 
-                <div className="product-quantity">
+                {/* <div className="product-quantity">
                     <TextField size="small" value={count} variant="outlined" />
-                </div>
+                </div> */}
             </CardContent>
             <CardActions className="btn-wrap">
                 <Button

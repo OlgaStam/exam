@@ -56,7 +56,7 @@ const Main = ({ addProductToCart, onChange, typeCurrency }: Props) => {
                 >
                     Our Shop Page
                 </Typography>
-                <Menu onChange={onChange} />
+                <Menu onChange={onChange} typeCurrency={typeCurrency} />
                 <Home
                     addProductToCart={addProductToCart}
                     typeCurrency={typeCurrency}
