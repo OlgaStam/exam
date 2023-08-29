@@ -9,10 +9,10 @@ type Props = {
 }
 
 const Footer = ({ cartData, typeCurrency }: Props) => {
+    
     return (
         <div>
             <CartFooter
-                totalCount={cartData.totalCount}
                 totalPrice={cartData.totalPrice}
                 typeCurrency={typeCurrency}
             />
