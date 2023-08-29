@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import Menu from "./Menu";
-import Home from "../../pages/Home/Home";
+import ProductsList from "../../components/Products/ProductList";
 
 type Props = {
     addProductToCart: (count: number, price: number) => void;
@@ -26,7 +26,7 @@ const Main = ({ addProductToCart, onChange, typeCurrency }: Props) => {
                     Our Shop Page
                 </Typography>
                 <Menu onChange={onChange} typeCurrency={typeCurrency} />
-                <Home
+                <ProductsList
                     addProductToCart={addProductToCart}
                     typeCurrency={typeCurrency}
                 />

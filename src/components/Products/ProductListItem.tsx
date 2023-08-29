@@ -8,7 +8,6 @@ import "./ProductListItem.scss";
 import { currencyExchange } from "../../helpers/currencyExchange";
 
 type Props = {
-  // id: number;
   name: string;
   description: String;
   price: number;
@@ -17,8 +16,7 @@ type Props = {
 };
 
 const ProductListItem = ({
-  // id,
-  name,
+   name,
   description,
   price,
   addProductToCart,
